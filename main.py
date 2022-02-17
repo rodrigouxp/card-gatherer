@@ -26,4 +26,3 @@ print(lista_adquiridos)
 print()
 print(lista_faltantes)
         
-
