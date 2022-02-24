@@ -44,7 +44,7 @@ total = int(sys.argv[2])
 adquiridos = listaAdquiridos(tabelaCard)
 faltantes = listaFaltantes(adquiridos, total)
 
-print(f'CARDS ADQUIRIDOS: {adquiridos}')
 print()
-print(f'CARDS FALTANTES: {faltantes}')
-        
+print(f'CARDS ADQUIRIDOS: {adquiridos}\nTOTAL: {len(adquiridos)}')
+print()
+print(f'CARDS FALTANTES: {faltantes}\nTOTAL: {len(faltantes)}')
