@@ -1,7 +1,7 @@
 import pandas as pd
-import sys
 from math import isnan
 import numpy as np
+import pathlib
 
 # Define a função que lê a tabela em .csv
 def readTable(tableName):
@@ -41,12 +41,9 @@ def listaFaltantes(list, total):
 
 
 ## Programa principal
-if len(sys.argv) != 3:
-    print(f'USAGE: python <table> <total cards>')
-    exit()
-
-tabela = readTable(sys.argv[1])
-total = int(sys.argv[2])
+caminho = pathlib.Path(input('Insira o caminho da tabela: '))
+tabela = readTable(caminho)
+total = int(input('Total de cards: '))
 
 adquiridos = listaAdquiridos(tabela)
 faltantes = listaFaltantes(adquiridos, total)
